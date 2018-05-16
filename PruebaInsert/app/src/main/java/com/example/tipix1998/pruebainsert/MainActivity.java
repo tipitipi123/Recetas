@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btn(View view) {
         hiloconexion = new WebServiceAsyncTask();
-        String cadenaLlamada = "https://tipix.000webhostapp.com/WebServiceProgramaloTu.php?op=0";
+        String cadenaLlamada = "https://tipix.000webhostapp.com/InsertarProductos.php?op=0";
         hiloconexion.execute( cadenaLlamada, "insertar" );
     }
 

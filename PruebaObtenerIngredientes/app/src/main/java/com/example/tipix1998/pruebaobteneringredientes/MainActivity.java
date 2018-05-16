@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     public void btnUpploader(View view) {
         for(int i=0;i<list.size();i++) {
             hiloconexion = new WebServiceAsyncTask();
-            String cadenaLlamada = "https://tipix.000webhostapp.com/WebServiceProgramaloTu.php?op=0";
+            String cadenaLlamada = "https://tipix.000webhostapp.com/InsertarProductos.php?op=0";
             hiloconexion.execute( cadenaLlamada, "insertar" , list.get(i));
         }
     }
