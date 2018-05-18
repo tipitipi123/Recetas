@@ -12,11 +12,11 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_top"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="#FF9800"
+        android:layout_height="120dp"
+        android:background="@color/background"
         android:minHeight="?attr/actionBarSize">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:text="Recetas"
                 android:textColor="#FFFFFF"
-                android:textSize="40dp"
+                android:textSize="45dp"
                 android:textStyle="bold" />
 
             <TextView
@@ -37,11 +37,17 @@
                 android:text="Recetas"
                 android:textColor="#FFFFFF"
                 android:textSize="14dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
                 android:textStyle="bold" />
-        </LinearLayout>
+        </RelativeLayout>
     </android.support.v7.widget.Toolbar>
 
-
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvListRecet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"></android.support.v7.widget.RecyclerView>
 
 
     </LinearLayout>

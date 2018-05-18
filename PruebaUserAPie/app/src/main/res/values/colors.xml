@@ -6,4 +6,7 @@
     <color name="colorError">#F44336</color>
     <color name="colorCorrecto">#00e676</color>
     <color name="colorNegro">#000000</color>
+    <color name="background">#FFA700</color>
+    <color name="white">#FFFFFF</color>
+    <color name="txtorange">#EECB88</color>
 </resources>

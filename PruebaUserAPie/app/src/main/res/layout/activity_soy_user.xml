@@ -15,8 +15,8 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar_top"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FF9800"
+            android:layout_height="120dp"
+            android:background="@color/background"
             android:minHeight="?attr/actionBarSize">
 
 
@@ -27,9 +27,8 @@
                 android:layout_gravity="center"
                 android:text="Ingredientes"
                 android:textColor="#FFFFFF"
-
-                android:textSize="60dp"
-                android:textStyle="bold" />
+                android:textSize="45dp"
+                 />
 
 
         </android.support.v7.widget.Toolbar>
@@ -62,14 +61,15 @@
                 android:visibility="invisible"
                 android:background="@drawable/edit_text_normal"
                 android:imeOptions="actionDone"
-                android:layout_marginTop="22dp"
+                android:textSize="18dp"
+                android:layout_marginBottom="30dp"
                 />
             <android.support.design.widget.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_centerInParent="true"
-                app:backgroundTint="#FF9800"
+                app:backgroundTint="@color/background"
                 android:src="@drawable/ic_adds"
                 android:id="@+id/btnAdd"
                 android:layout_marginBottom="30dp"/>
@@ -78,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                app:backgroundTint="#FF9800"
+                app:backgroundTint="@color/background"
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="30dp"
                 android:src="@drawable/ic_next_product"

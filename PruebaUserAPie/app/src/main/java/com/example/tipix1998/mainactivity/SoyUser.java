@@ -3,6 +3,7 @@ package com.example.tipix1998.mainactivity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -49,6 +50,9 @@ public class SoyUser extends AppCompatActivity {
     @ViewById AutoCompleteTextView txtAddIngredient;
     @ViewById FloatingActionButton btnAdd;
     @ViewById FloatingActionButton btnNext;
+    @ViewById TextView toolbar_title;
+
+
     cell_add_ingredient adapter;
     //Autocompletar
     private ArrayAdapter<String> adapterAutoComplete;
@@ -76,6 +80,9 @@ public class SoyUser extends AppCompatActivity {
             }
         });
 
+        //Font
+        Typeface typeFaceTittle=Typeface.createFromAsset(getAssets(),"fonts/Chalkduster.ttf");
+        toolbar_title.setTypeface(typeFaceTittle);
 
         //AutoCompletar
         hiloconexion = new WebServiceAsyncTask();

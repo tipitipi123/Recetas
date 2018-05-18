@@ -5,22 +5,19 @@
     android:layout_height="fill_parent">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_top"
-        android:background="#FF9800"
-        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:layout_height="120dp"
         android:layout_width="match_parent"
         android:minHeight="?attr/actionBarSize">
-
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inicio"
-        android:textSize="60dp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-
+        android:textSize="55dp"
+        android:textColor="@color/white"
         android:layout_gravity="center"
-        android:id="@+id/toolbar_title" />
+        android:id="@+id/toolbar_title_main" />
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
@@ -38,24 +35,22 @@
             android:layout_weight="1"
             android:layout_marginLeft="40dp"
             android:layout_gravity="center_vertical"
-            android:src="@mipmap/food"/>
+            android:src="@drawable/ic_select_usr"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Busqueda por ingredientes"
-            android:textSize="20dp"
-            android:textColor="#FF9800"
+            android:textSize="25dp"
+            android:textColor="@color/txtorange"
             android:textStyle="bold"
             android:layout_marginLeft="30dp"
+            android:id="@+id/txtSearchIngredient"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"/>
 
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/cardview_dark_background"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -64,22 +59,23 @@
         android:id="@+id/lyBlogger">
 
         <ImageView
-            android:layout_width="1dp"
+            android:layout_width="20dp"
             android:layout_height="150dp"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="40dp"
             android:layout_weight="1"
-            android:src="@mipmap/food" />
+            android:src="@drawable/ic_select_blogg" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Soy
-Blogger"
-            android:textSize="20dp"
-            android:textColor="#FF9800"
+            android:text="Tengo un
+blog"
+            android:id="@+id/txtbloggerMain"
+            android:textSize="25dp"
+            android:textColor="@color/txtorange"
             android:textStyle="bold"
-            android:layout_marginLeft="30dp"
+
             android:layout_gravity="center_vertical"
             android:layout_weight="1"/>
 

@@ -1,7 +1,10 @@
 package com.example.tipix1998.mainactivity;
 
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,15 +17,26 @@ import java.util.ArrayList;
 
 @EActivity(R.layout.activity_recetas)
 public class Recetas extends AppCompatActivity {
-
+    @ViewById RecyclerView rvListRecet;
     @ViewById TextView toolbar_ingredient;
-    private ArrayList<String> ingredientInsert;
+    @ViewById TextView toolbar_title;
 
+    private ArrayList<String> ingredientInsert;
+    RecetasAdapter adapter;
     @AfterViews
     void afterViews(){
         getBundle();
         showIngredientToolBar();
+        adapter = new RecetasAdapter(this);
+        configRecycler();
+        //Font
+        Typeface typeFaceTittle=Typeface.createFromAsset(getAssets(),"fonts/Chalkduster.ttf");
+        toolbar_title.setTypeface(typeFaceTittle);
+        Typeface typeFaceText=Typeface.createFromAsset(getAssets(),"fonts/HelveticaNeue_Bold.ttf");
+        toolbar_ingredient.setTypeface(typeFaceText);
     }
+
+
 
     private void getBundle(){
      ingredientInsert = getIntent().getExtras().getStringArrayList( "ingredientSend" );
@@ -41,5 +55,12 @@ public class Recetas extends AppCompatActivity {
         }
 
         toolbar_ingredient.setText( ingredient );
+    }
+
+    public void configRecycler(){
+        rvListRecet.setHasFixedSize(true);
+        final LinearLayoutManager mLayoutManager = new LinearLayoutManager(this);
+        rvListRecet.setLayoutManager(mLayoutManager);
+        rvListRecet.setAdapter(adapter);
     }
 }
