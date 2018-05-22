@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_gravity="center"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_intro"
+        android:id="@+id/ivInit"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:clickable="true"
+        android:id="@+id/rlPopUp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:id="@+id/ivPop"/>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="40dp"
+            android:id="@+id/fabClose"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_remove_p"
+            app:borderWidth="0dp"
+            android:scaleType="center"
+            android:backgroundTint="@color/background"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"/>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="450dp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@color/white"
+            >
+            <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:background="@color/background"
+        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Inicio"
+            android:textSize="55dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title_main" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:id="@+id/lySearchIngredient"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_select_usr"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Busqueda por ingredientes"
+            android:textSize="25dp"
+            android:textColor="@color/txtorange"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/txtSearchIngredient"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:id="@+id/lyBlogger">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_select_blogg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tengo un
+blog"
+            android:id="@+id/txtbloggerMain"
+            android:textSize="25dp"
+            android:textColor="@color/txtorange"
+            android:textStyle="bold"
+
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

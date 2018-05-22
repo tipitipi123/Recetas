@@ -15,6 +15,15 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/txtorange</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/background</item>
+        <item name="colorControlNormal">@color/background</item>
+        <item name="colorControlActivated">@color/background</item>
+    </style>
 
 </resources>

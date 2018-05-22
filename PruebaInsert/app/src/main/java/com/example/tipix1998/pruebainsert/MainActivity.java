@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     //Tarea asincrona que sirve para obtener tanto los productos como las categorias del web service.
 //En el PostExecute se muestra en el textview si la operación se ha realizado correctamente.
     public class WebServiceAsyncTask extends AsyncTask<String, Void, String> {
-
+        String devuelve = "";
         @Override
         protected String doInBackground(String... params) {
             String cadena = params[0];
@@ -80,9 +80,14 @@ public class MainActivity extends AppCompatActivity {
             super.onProgressUpdate( values );
         }
 
+        public  String devolverEstado(){
+            return devuelve;
+        }
+
+
 
         public String insertar(String cadena, String valorNombre) {
-            String devuelve = "";
+
             URL url;
             try {
                 HttpURLConnection urlConn;

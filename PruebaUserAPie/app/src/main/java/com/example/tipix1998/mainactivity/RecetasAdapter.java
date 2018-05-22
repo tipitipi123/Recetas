@@ -18,6 +18,7 @@ public class RecetasAdapter  extends RecyclerView.Adapter<RecetasAdapter.ViewHol
     public  RecetasAdapter(Context context){
         this.context = context;
     }
+
     @NonNull
     @Override
     public RecetasAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

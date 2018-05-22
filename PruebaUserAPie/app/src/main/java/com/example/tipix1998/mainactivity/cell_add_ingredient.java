@@ -71,4 +71,5 @@ public class cell_add_ingredient extends RecyclerView.Adapter<cell_add_ingredien
     }
 
 
+
 }

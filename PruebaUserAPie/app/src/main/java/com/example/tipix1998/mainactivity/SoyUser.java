@@ -43,6 +43,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
+import Fragment.Utils;
+
 @EActivity(R.layout.activity_soy_user)
 public class SoyUser extends AppCompatActivity {
 
@@ -235,8 +237,13 @@ public class SoyUser extends AppCompatActivity {
     /////////////////////////////////////////
     @Click(R.id.btnNext)
     void buttonNext(){
-        Intent intent = new Intent( SoyUser.this, Recetas_.class );
-        intent.putExtra( "ingredientSend",adapter.getIngredient());
-        startActivity( intent );
+        if(adapter.getIngredient().size()>=1){
+            Intent intent = new Intent( SoyUser.this, Recetas_.class );
+            intent.putExtra( "ingredientSend",adapter.getIngredient());
+            startActivity( intent );
+        }else{
+            Utils.showAlert(this, "Debe introducir por lo menos un ingrediente","Aceptar");
+        }
+
     }
 }

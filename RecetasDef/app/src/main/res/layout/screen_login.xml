@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:background="@color/background"
+        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            android:textSize="55dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:id="@+id/et_title" />
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etloginLayout"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="65dp"
+        android:theme="@style/TextLabel"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="false">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:hint="Usuario"
+            android:importantForAutofill="noExcludeDescendants"
+            android:textColorHint="@color/txtorange"
+            android:drawablePadding="10dp"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etPasswordLayout"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        app:passwordToggleEnabled="true"
+        android:theme="@style/TextLabel">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/etPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:importantForAutofill="noExcludeDescendants"
+            android:textColorHint="@color/txtorange"
+            android:drawablePadding="10dp"
+            android:textStyle="bold"
+            android:textSize="25dp"/>
+    </android.support.design.widget.TextInputLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usuario o contraseña incorrecta"
+        android:textColor="@color/colorError"
+        android:id="@+id/etError"
+        android:visibility="invisible"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Registrarme"
+            android:id="@+id/btnRegister"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="35dp"
+            android:background="@drawable/button_rectangule"
+            android:textColor="@color/white"
+            android:layout_marginBottom="25dp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background"
+            android:src="@drawable/ic_next_product"
+            android:layout_alignParentRight="true"
+            app:borderWidth="0dp"
+            android:id="@+id/btnNext"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="35dp"/>
+
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -10,22 +10,29 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-       >
-        <activity android:name=".MainActivity_"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity_"
             android:theme="@style/AppFullScreenTheme">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SoyUser_"
-            android:theme="@style/AppFullScreenTheme"/>
-        <activity android:name=".Recetas_"
-            android:theme="@style/AppFullScreenTheme"/>
+        <activity
+            android:name=".SoyUser_"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name=".Recetas_"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name=".Login_"
+            android:theme="@style/AppFullScreenTheme"
+            />
+        <activity android:name=".Registro_"
+            android:theme="@style/AppFullScreenTheme"
+            android:noHistory = "true"></activity>
     </application>
 
 </manifest>
