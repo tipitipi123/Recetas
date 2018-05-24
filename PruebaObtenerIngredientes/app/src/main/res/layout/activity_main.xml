@@ -28,6 +28,8 @@
         android:onClick="btnUpploader"
         android:text="Upploader"/>
 
+    <But
+
     <ListView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

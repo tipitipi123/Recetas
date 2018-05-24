@@ -13,6 +13,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".Main.MainActivity_"
+            android:theme="@style/AppFullScreenTheme"/>
+        <activity
+            android:name=".Main.SplashAsctivity.SplashScreen"
             android:theme="@style/AppFullScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +25,8 @@
         </activity>
         <activity
             android:name=".Main.Usuario.UsrIngredient_"
-            android:theme="@style/AppFullScreenTheme" />
+            android:theme="@style/AppFullScreenTheme"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Main.Usuario.UsrRecipe_"
             android:theme="@style/AppFullScreenTheme" />
@@ -32,6 +36,10 @@
         <activity
             android:name=".Main.Blogger.RegistroBlogger_"
             android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name=".Main.Blogger.AddRecipes_"
+            android:theme="@style/AppFullScreenTheme" />
+
     </application>
 
 </manifest>

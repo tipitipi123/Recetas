@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
-            adapter = new ArrayAdapter<String>( MainActivity.this,android.R.layout.simple_list_item_1, allProduct );
+            adapter = new ArrayAdapter<String>( MainActivity.this,android.R.layout.simple_dropdown_item_1line, allProduct );
             autoComplete.setAdapter( adapter );
             autoComplete.setThreshold( 1 );
             Toast.makeText( MainActivity.this, "Creado", Toast.LENGTH_SHORT ).show();

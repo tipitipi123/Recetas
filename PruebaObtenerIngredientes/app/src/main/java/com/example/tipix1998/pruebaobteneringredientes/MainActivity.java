@@ -58,19 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 texto += cad ;
             }
 
-            //Wikipedia
-            String[] productos = texto.split( ">" );
-            for(int i=111; i<productos.length-120;i++){
-                if((!productos[i].split( "<" )[0].equals("")) && (productos[i].split( "<" )[0].length()>3))
-                list.add(productos[i].split( "<" )[0].replace( "Editar","" ));
-                //list.add(productos[i].split( ">" )[0].replace( "/","" ).replace( "\"","" ));
-            }
-
             //sinLactosa
-            //String[] productos = texto.split( "<meta property=\"article:tag\" content=\"");
-             /*for(int i=111; i<productos.length-120;i++){
-                //list.add(productos[i].split( ">" )[0].replace( "/","" ).replace( "\"","" ));
-            }*/
+            String[] productos = texto.split( "<meta property=\"article:tag\" content=\"");
+             for(int i=111; i<productos.length-120;i++){
+                list.add(productos[i].split( ">" )[0].replace( "/","" ).replace( "\"","" ));
+            }
 
 
 

@@ -6,8 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <AutoCompleteTextView
+        android:layout_centerVertical="true"
+
+        android:scrollbarThumbVertical="@id/btnComprobar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txtAuto"/>
@@ -19,4 +25,5 @@
         android:onClick="btnComprobar"
         />
 
+</RelativeLayout>
 </LinearLayout>

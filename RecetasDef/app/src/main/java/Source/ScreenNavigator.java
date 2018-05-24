@@ -67,12 +67,7 @@ public class ScreenNavigator {
                 break;
         }
 
-        if(!destroyPrev) {
-            ft.add(R.id.fragmentContainer, f, f.getClass().getSimpleName());
-            ft.addToBackStack(null); // si no se añade, al abrir un nuevo fragment, el actual se destuye y no se peude volver atrás
-        }else{
-            ft.replace(R.id.fragmentContainer, f, f.getClass().getSimpleName());
-        }
+
         // Start the animated transition.
         ft.commitAllowingStateLoss();
 

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Main.Blogger.AddRecipes">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        android:background="@color/background"
+        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Añadir"
+            android:textSize="55dp"
+            android:textColor="@color/white"
+            android:id="@+id/toolbar_title_main" />
+    </android.support.v7.widget.Toolbar>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_chk"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:scaleType="center"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/white"
+            app:borderWidth="0dp"
+            />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etUrlLayout"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="10dp"
+                android:theme="@style/TextLabel"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="false">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:importantForAutofill="noExcludeDescendants"
+                    android:hint="Link al blog"
+                    android:textColorHint="@color/txtorange"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:text="https://www.recetassinlactosa.com/ensalada-de-garbanzos-con-bacalao/"
+                    android:textSize="25dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etNameDisLayout"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:theme="@style/TextDisable"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="false">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etNameDis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:enabled="false"
+                    android:hint="Nombre receta"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="25dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/etNameLayout"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="35dp"
+                android:visibility="gone"
+                android:layout_marginRight="35dp"
+                android:theme="@style/TextLabel"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="false">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:hint="Nombre receta"
+                    android:drawablePadding="10dp"
+                    android:textStyle="bold"
+                    android:textSize="25dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:paddingTop="15dp"
+                android:id="@+id/btnImage"
+                android:visibility="visible"
+                android:paddingBottom="15dp"
+                android:background="@drawable/btnivdisabble_tag"
+                android:src="@drawable/ic_fotoblock"
+                android:scaleType="centerInside"/>
+
+            <ImageButton
+                android:id="@+id/btnImageView"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:visibility="gone"
+                android:adjustViewBounds="true"
+                android:background="@color/defaultLayout"
+                android:scaleType="centerCrop"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp">
+                <LinearLayout
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent">
+                    <LinearLayout
+                        android:id="@+id/llViewTag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"></LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1">
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        app:backgroundTint="@color/background"
+        app:elevation="0dp"
+        android:elevation="0dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_adds"
+        android:id="@+id/btnAdd"
+        />
+    </RelativeLayout>
+</LinearLayout>

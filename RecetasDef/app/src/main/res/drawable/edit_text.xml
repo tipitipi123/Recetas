@@ -6,9 +6,5 @@
                 android:color="#FF9800" />
         </shape>
     </item>
-    <item  android:bottom="1dp" >
-        <shape android:shape="rectangle" >
-            <solid android:color="@color/defaultLayout" />
-        </shape>
-    </item>
+
 </layer-list>

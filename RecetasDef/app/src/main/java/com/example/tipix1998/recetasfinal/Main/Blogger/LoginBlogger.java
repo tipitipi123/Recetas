@@ -104,7 +104,8 @@ public class LoginBlogger extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             if (devuelve.equals( "1" )) {
-                Toast.makeText( LoginBlogger.this, "Dentro", Toast.LENGTH_SHORT ).show();
+                Intent intent = new Intent( LoginBlogger.this, AddRecipes_.class );
+                startActivity(intent);
                 etError.setVisibility( View.INVISIBLE );
             }else{
                 etError.setVisibility( View.VISIBLE );
